@@ -27,7 +27,7 @@ Modifications over the original code:
 - Event to notify completion
 
 ## Playground
-[JS Fiddle](https://jsfiddle.net/Haztivity/3xnomLuf/2)
+[JS Fiddle](https://jsfiddle.net/Haztivity/3xnomLuf/3)
 
 ## Usage
 
