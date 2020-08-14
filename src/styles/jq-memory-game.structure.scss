@@ -1,0 +1,52 @@
+.jq-memory-game {
+    $this: &;
+    &__board {
+        display: flex;
+        flex-wrap: wrap;
+        &#{$this}--disabled {
+            pointer-events: none;
+        }
+    }
+
+    &__card {
+        position: relative;
+        cursor: pointer;
+        perspective: 700px;
+        img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+        &#{$this}__card--flipped, &#{$this}__card--has-match {
+            pointer-events: none;
+
+            #{$this}__card__back {
+                transform: rotateY(180deg);
+            }
+
+            #{$this}__card__front {
+                transform: rotateY(360deg);
+            }
+        }
+    }
+
+    &__card__back, &__card__front {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        backface-visibility: hidden;
+        transition: transform 400ms;
+    }
+
+    &__card__back {
+        z-index: 1;
+    }
+
+    &__card__front {
+        transform: rotateY(180deg);
+    }
+}

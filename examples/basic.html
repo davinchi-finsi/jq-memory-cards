@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Basic example</title>
+        <link rel="stylesheet" href="../dist/jquery.memory-game.css"/>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="../dist/jquery.memory-game.js"></script>
+    </head>
+    <body>
+        <div id="game" class="jq-memory-game">
+            <div data-jq-memory-game-interactions></div>
+        </div>
+
+        <script>
+            const $el = $("#game");
+            $el.memoryGame({
+                data: [
+                    {
+                        id: "card 1",
+                        front: "Carta 1"
+                    },
+                    {
+                        id: "card 2",
+                        front: {
+                            src: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Android_P_logo.svg/768px-Android_P_logo.svg.png",
+                            alt: "Android Operating System Logo"
+                        }
+                    },
+                    {
+                        id: "card 3",
+                        front: (memoryGameBoard, item) => $("<span>"+item.id+"</span>")
+                    }
+                ]
+            });
+            $el.on("memoryGameCardFlipped", (event, memoryGameInstance)=> console.log("completed"));
+            $el.on("memoryGameCardStart", (event, memoryGameInstance)=> console.log("start"));
+            $el.on("memoryGameFlip",(event, memoryGameInstance, cardFlipped) => console.log("card flipped", cardFlipped));
+            $el.on(
+                "memoryGameCardsCheck",
+                (
+                    event,
+                    memoryGameInstance, // instance of the widget
+                    cardsMatch, // boolean, true if the cards match
+                    numInteractions, // number of interactions performed
+                    cardsFlipped // array with the two cards flipped
+                ) => console.log("check cards", event, memoryGameInstance, cardsMatch, numInteractions, cardsFlipped)
+            );
+        </script>
+    </body>
+</html>

@@ -1,0 +1,37 @@
+.jq-memory-game__board {
+  display: flex;
+  flex-wrap: wrap; }
+  .jq-memory-game__board.jq-memory-game--disabled {
+    pointer-events: none; }
+
+.jq-memory-game__card {
+  position: relative;
+  cursor: pointer;
+  perspective: 700px; }
+  .jq-memory-game__card img {
+    max-width: 100%;
+    max-height: 100%; }
+  .jq-memory-game__card.jq-memory-game__card--flipped, .jq-memory-game__card.jq-memory-game__card--has-match {
+    pointer-events: none; }
+    .jq-memory-game__card.jq-memory-game__card--flipped .jq-memory-game__card__back, .jq-memory-game__card.jq-memory-game__card--has-match .jq-memory-game__card__back {
+      transform: rotateY(180deg); }
+    .jq-memory-game__card.jq-memory-game__card--flipped .jq-memory-game__card__front, .jq-memory-game__card.jq-memory-game__card--has-match .jq-memory-game__card__front {
+      transform: rotateY(360deg); }
+
+.jq-memory-game__card__back, .jq-memory-game__card__front {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backface-visibility: hidden;
+  transition: transform 400ms; }
+
+.jq-memory-game__card__back {
+  z-index: 1; }
+
+.jq-memory-game__card__front {
+  transform: rotateY(180deg); }

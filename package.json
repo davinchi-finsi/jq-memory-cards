@@ -1,0 +1,50 @@
+{
+  "name": "jq-memory-game",
+  "version": "1.0.0",
+  "description": "A jquery plugin to create a simple memory game",
+  "main": "dist/jquery.memory-game.js",
+  "jsnext:main": "esm2015/jquery.memorygame.js",
+  "ts:main": "src/index.ts",
+  "types": "src/index.ts",
+  "typings": "src/index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rollup -c",
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/davinchi-finsi/jq-memory-game.git"
+  },
+  "homepage": "https://github.com/davinchi-finsi/jq-memory-game",
+  "author": "Finsi",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/jquery": "^3.3.2",
+    "@types/jqueryui": "^1.12.2",
+    "@types/node": "^14.0.27",
+    "chalk": "^4.1.0",
+    "conventional-changelog-cli": "^2.0.34",
+    "lodash.camelcase": "^4.3.0",
+    "rimraf": "^3.0.2",
+    "rollup": "^2.23.0",
+    "rollup-plugin-license": "^2.1.0",
+    "rollup-plugin-scss": "^2.5.0",
+    "rollup-plugin-terser": "^6.1.0",
+    "rollup-plugin-typescript": "^1.0.1",
+    "rollup-plugin-typescript2": "^0.27.1",
+    "rollup-plugin-uglify": "^6.0.4",
+    "rollup-plugin-uglify-es": "0.0.1",
+    "standard-version": "^8.0.2",
+    "terser": "^5.0.0",
+    "typedoc": "^0.17.8",
+    "typedoc-plugin-external-module-name": "^1.1.1",
+    "typescript": "^3.9.7"
+  },
+  "dependencies": {
+    "jquery": "^3.3.1"
+  },
+  "peerDependencies": {
+    "jquery-ui": "^1.12.1"
+  }
+}
