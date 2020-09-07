@@ -1,6 +1,6 @@
 git:
   push: false
-
+  requireCleanWorkingDir: false
 plugins:
   "@release-it/conventional-changelog":
      preset: angular
