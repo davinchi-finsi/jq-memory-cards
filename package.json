@@ -4,6 +4,8 @@
   "description": "A jquery plugin to create a simple memory game",
   "main": "dist/jquery.memory-game.js",
   "jsnext:main": "esm2015/jquery.memorygame.js",
+  "es2015": "esm2015/jquery.memorygame.js",
+  "module": "esm2015/jquery.memorygame.js",
   "ts:main": "src/index.ts",
   "types": "src/index.ts",
   "typings": "src/index.ts",
