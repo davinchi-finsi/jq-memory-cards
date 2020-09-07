@@ -1,0 +1,10 @@
+git:
+  push: false
+
+plugins:
+  @release-it/conventional-changelog:
+     preset: angular
+     infile: CHANGELOG.md
+
+hooks:
+  after:bump: npm run build && rimraf dist/jquery.memory-game.structure.js && rimraf dist/jquery.memory-game.theme.js
