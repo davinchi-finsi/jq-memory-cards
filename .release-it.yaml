@@ -2,7 +2,7 @@ git:
   push: false
 
 plugins:
-  @release-it/conventional-changelog:
+  "@release-it/conventional-changelog":
      preset: angular
      infile: CHANGELOG.md
 
